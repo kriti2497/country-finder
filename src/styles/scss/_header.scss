@@ -1,0 +1,12 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+  background-color: $darkBlue;
+  span {
+    color: $white;
+  }
+  .icon-val {
+    margin-right: 12px;
+  }
+}

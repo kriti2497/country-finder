@@ -1,0 +1,16 @@
+.country-listing {
+  background-color: $veryDarkBlueDarkMode;
+  display: grid;
+
+  grid-template-columns: 1fr;
+  gap: 35px;
+  padding: 50px 75px;
+
+  @include breakpoint-up(medium) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include breakpoint-up(large) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
