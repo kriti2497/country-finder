@@ -1,0 +1,92 @@
+.search-country {
+  @include breakpoint-up(large) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.icon-input {
+  position: relative;
+  @include breakpoint-up(large) {
+    width: 450px;
+  }
+  margin-bottom: 40px;
+  .search-input {
+    width: 100%;
+    padding: 18px 5px 18px 40px;
+    background-color: $darkBlue;
+    border: none;
+    outline: none;
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+    &::placeholder {
+      color: $white;
+    }
+  }
+
+  .icon-val {
+    color: $white;
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+  }
+}
+
+.dropdown {
+  margin-bottom: 40px;
+  @include breakpoint-up(large) {
+    width: 300px;
+    margin: 0;
+  }
+  cursor: pointer;
+  position: relative;
+  .select {
+    background-color: $darkBlue;
+    padding: 18px;
+    color: $white;
+    font-weight: 500;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .options-list {
+    position: absolute;
+    width: 100%;
+    background-color: $darkBlue;
+    overflow-y: auto;
+    transition: 0.4s linear 0.2s;
+    margin-top: 2px;
+    height: 0;
+  }
+
+  .option {
+    padding: 8px 22px;
+    font-weight: 500;
+    font-size: 16px;
+    color: $white;
+    transition: 0.3s ease-in-out;
+  }
+
+  .option:hover,
+  .option.selected {
+    color: $white;
+    background-color: $veryDarkBlueDarkMode;
+  }
+
+  .options-list::-webkit-scrollbar {
+    width: 4px;
+    background-color: $darkBlue;
+  }
+
+  .options-list::-webkit-scrollbar-thumb {
+    background-color: $veryDarkBlueDarkMode;
+  }
+
+  .active {
+    height: 180px;
+  }
+}

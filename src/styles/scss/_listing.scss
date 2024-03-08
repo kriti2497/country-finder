@@ -1,10 +1,17 @@
-.country-listing {
+.main-listing {
   background-color: $veryDarkBlueDarkMode;
+  padding: 30px 40px;
+  @include breakpoint-up(large) {
+    padding: 50px 75px;
+  }
+  min-height: calc(100vh - 81.5px);
+}
+
+.country-listing {
   display: grid;
 
   grid-template-columns: 1fr;
   gap: 35px;
-  padding: 50px 75px;
 
   @include breakpoint-up(medium) {
     grid-template-columns: repeat(2, 1fr);

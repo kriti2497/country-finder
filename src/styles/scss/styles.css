@@ -18,12 +18,21 @@ header .icon-val {
   margin-right: 12px;
 }
 
-.country-listing {
+.main-listing {
   background-color: hsl(207, 26%, 17%);
+  padding: 30px 40px;
+  min-height: calc(100vh - 81.5px);
+}
+@media (min-width: 1024px) {
+  .main-listing {
+    padding: 50px 75px;
+  }
+}
+
+.country-listing {
   display: grid;
   grid-template-columns: 1fr;
   gap: 35px;
-  padding: 50px 75px;
 }
 @media (min-width: 640px) {
   .country-listing {
@@ -49,7 +58,7 @@ header .icon-val {
   border-radius: 5px 5px 0 0;
 }
 .card-div b {
-  font-weight: 400;
+  font-weight: bold;
 }
 .card-div .text-div {
   display: flex;
@@ -66,5 +75,98 @@ header .icon-val {
 }
 .card-div .subText {
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 400;
+}
+
+@media (min-width: 1024px) {
+  .search-country {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.icon-input {
+  position: relative;
+  margin-bottom: 40px;
+}
+@media (min-width: 1024px) {
+  .icon-input {
+    width: 450px;
+  }
+}
+.icon-input .search-input {
+  width: 100%;
+  padding: 18px 5px 18px 40px;
+  background-color: hsl(209, 23%, 22%);
+  border: none;
+  outline: none;
+  color: white;
+  border-radius: 5px;
+  font-size: 16px;
+}
+.icon-input .search-input::-moz-placeholder {
+  color: hsl(0, 0%, 100%);
+}
+.icon-input .search-input::placeholder {
+  color: hsl(0, 0%, 100%);
+}
+.icon-input .icon-val {
+  color: hsl(0, 0%, 100%);
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+}
+
+.dropdown {
+  margin-bottom: 40px;
+  cursor: pointer;
+  position: relative;
+}
+@media (min-width: 1024px) {
+  .dropdown {
+    width: 300px;
+    margin: 0;
+  }
+}
+.dropdown .select {
+  background-color: hsl(209, 23%, 22%);
+  padding: 18px;
+  color: hsl(0, 0%, 100%);
+  font-weight: 500;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.dropdown .options-list {
+  position: absolute;
+  width: 100%;
+  background-color: hsl(209, 23%, 22%);
+  overflow-y: auto;
+  transition: 0.4s linear 0.2s;
+  margin-top: 2px;
+  height: 0;
+}
+.dropdown .option {
+  padding: 8px 22px;
+  font-weight: 500;
+  font-size: 16px;
+  color: hsl(0, 0%, 100%);
+  transition: 0.3s ease-in-out;
+}
+.dropdown .option:hover,
+.dropdown .option.selected {
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(207, 26%, 17%);
+}
+.dropdown .options-list::-webkit-scrollbar {
+  width: 4px;
+  background-color: hsl(209, 23%, 22%);
+}
+.dropdown .options-list::-webkit-scrollbar-thumb {
+  background-color: hsl(207, 26%, 17%);
+}
+.dropdown .active {
+  height: 180px;
 }/*# sourceMappingURL=styles.css.map */
