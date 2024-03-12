@@ -1,14 +1,21 @@
 import "./App.css";
 
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+
+import CountryDetails from "./components/CountryDetails";
 import CountryListing from "./components/CountryListing";
 import Header from "./components/Header";
 
 function App() {
   return (
-    <>
+    <BrowserRouter>
       <Header />
-      <CountryListing />
-    </>
+      <Routes>
+        <Route path="/" element={<CountryListing />} />
+        <Route path="/details/:demonym" element={<CountryDetails />} />
+        <Route path="*" element={<CountryListing />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

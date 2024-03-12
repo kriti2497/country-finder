@@ -1,0 +1,93 @@
+.details-div {
+  .back-btn {
+    color: $white;
+    background-color: $darkBlue;
+    border: none;
+    padding: 5px 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 2px;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  i {
+    margin-right: 10px;
+  }
+  img {
+    height: 230px;
+    width: 100%;
+    @include breakpoint-up(large) {
+      height: 300px;
+    }
+    object-fit: cover;
+  }
+
+  .country-details {
+    margin-top: 60px;
+
+    @include breakpoint-up(large) {
+      display: flex;
+      gap: 80px;
+      align-items: center;
+    }
+  }
+
+  .details-img {
+    display: flex;
+    flex: 1;
+  }
+
+  .details-text {
+    flex: 1;
+    color: $white;
+    margin-top: 45px;
+
+    @include breakpoint-up(large) {
+      margin: 0;
+    }
+    .title {
+      font-size: 28px;
+      font-weight: 600;
+      margin-bottom: 25px;
+    }
+
+    .basic-details {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      gap: 40px;
+      margin-bottom: 40px;
+      @include breakpoint-up(large) {
+        gap: unset;
+        flex-direction: unset;
+      }
+    }
+
+    .text-div {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+
+      .subText {
+        font-weight: 200;
+      }
+    }
+
+    .border-countries {
+      .b-title {
+        font-size: 18px;
+        font-weight: 500;
+      }
+
+      .border-chips {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 8px;
+      }
+
+      .border-val {
+        flex-basis: auto;
+        margin: 10px 0 0;
+      }
+    }
+  }
+}

@@ -2,6 +2,15 @@
   background-color: $darkBlue;
   color: $white;
   border-radius: 5px;
+  transition: all 300ms ease-in-out;
+  cursor: pointer;
+  text-decoration: none;
+
+  &:hover {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+      rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    transform: scale(1.02);
+  }
   img {
     width: 100%;
     height: 195px;

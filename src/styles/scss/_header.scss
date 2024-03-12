@@ -3,6 +3,9 @@ header {
   justify-content: space-between;
   padding: 30px;
   background-color: $darkBlue;
+  .title {
+    cursor: pointer;
+  }
   span {
     color: $white;
   }

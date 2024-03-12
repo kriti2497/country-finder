@@ -1,9 +1,14 @@
+import { Link } from "react-router-dom";
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React from "react";
 
 const CountryCard: React.FC<{ country: any }> = ({ country }) => {
   return (
-    <div className="card-div">
+    <Link
+      className="card-div"
+      to={"/details/" + country.demonym}
+      key={country.demonym}
+    >
       <img src={country.flags.svg} alt="img" />
       <div className="card-text">
         <p className="card-title">{country.name}</p>
@@ -22,7 +27,7 @@ const CountryCard: React.FC<{ country: any }> = ({ country }) => {
           </p>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 
