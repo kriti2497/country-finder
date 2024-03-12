@@ -12,7 +12,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<CountryListing />} />
-        <Route path="/details/:demonym" element={<CountryDetails />} />
+        <Route path="/details/:alpha3Code" element={<CountryDetails />} />
         <Route path="*" element={<CountryListing />} />
       </Routes>
     </BrowserRouter>

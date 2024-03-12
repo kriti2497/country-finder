@@ -2,12 +2,19 @@ header {
   display: flex;
   justify-content: space-between;
   padding: 30px;
-  background-color: $darkBlue;
+  background-color: var(--bg-secondary);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  // position: fixed;
+  // z-index: 1;
+  // width: 100%;
   .title {
     cursor: pointer;
+    font-weight: 800;
   }
   span {
-    color: $white;
+    color: var(--text-primary);
+    cursor: pointer;
   }
   .icon-val {
     margin-right: 12px;

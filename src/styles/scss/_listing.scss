@@ -1,5 +1,5 @@
 .main-listing {
-  background-color: $veryDarkBlueDarkMode;
+  background-color: var(--background);
   padding: 30px 40px;
   @include breakpoint-up(large) {
     padding: 50px 75px;

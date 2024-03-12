@@ -6,16 +6,18 @@ import { useEffect, useState } from "react";
 import countryData from "../data.json";
 
 const CountryDetails = () => {
-  const { demonym } = useParams();
+  const { alpha3Code } = useParams();
 
   const navigate = useNavigate();
 
   const [countryVal, setCountryVal] = useState<any>({});
 
   useEffect(() => {
-    const value = countryData.filter((each: any) => each.demonym === demonym);
+    const value = countryData.filter(
+      (each: any) => each.alpha3Code === alpha3Code
+    );
     setCountryVal(value[0]);
-  }, []);
+  }, [alpha3Code]);
 
   const getBorderCountries = () => {
     if (countryVal && countryVal.borders?.length > 0) {
@@ -33,8 +35,7 @@ const CountryDetails = () => {
               <div className=" border-val" key={eachCountry.name}>
                 <button
                   onClick={() => {
-                    navigate(`/details/${eachCountry.demonym}`);
-                    navigate(0);
+                    navigate(`/details/${eachCountry.alpha3Code}`);
                   }}
                   className="back-btn"
                 >

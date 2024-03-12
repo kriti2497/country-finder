@@ -6,8 +6,8 @@ const CountryCard: React.FC<{ country: any }> = ({ country }) => {
   return (
     <Link
       className="card-div"
-      to={"/details/" + country.demonym}
-      key={country.demonym}
+      to={"/details/" + country.alpha3Code}
+      key={country.alpha3Code}
     >
       <img src={country.flags.svg} alt="img" />
       <div className="card-text">
