@@ -64,44 +64,60 @@ const CountryDetails = () => {
             <p className="title">{countryVal.name}</p>
             <div className="basic-details">
               <div className="text-div">
-                <p className="subText">
-                  <b>Native Name: </b>
-                  {countryVal.nativeName}
-                </p>
-                <p className="subText">
-                  <b>Population: </b>
-                  {countryVal.population.toLocaleString()}
-                </p>
-                <p className="subText">
-                  <b>Region: </b>
-                  {countryVal.region}
-                </p>
-                <p className="subText">
-                  <b>Sub Pregion: </b>
-                  {countryVal.subregion}
-                </p>
-                <p className="subText">
-                  <b>Capital: </b>
-                  {countryVal.capital}
-                </p>
+                {countryVal.nativeName && (
+                  <p className="subText">
+                    <b>Native Name: </b>
+                    {countryVal.nativeName}
+                  </p>
+                )}
+                {countryVal.population && (
+                  <p className="subText">
+                    <b>Population: </b>
+                    {countryVal.population.toLocaleString()}
+                  </p>
+                )}
+                {countryVal.region && (
+                  <p className="subText">
+                    <b>Region: </b>
+                    {countryVal.region}
+                  </p>
+                )}
+                {countryVal.subregion && (
+                  <p className="subText">
+                    <b>Sub Pregion: </b>
+                    {countryVal.subregion}
+                  </p>
+                )}
+                {countryVal.capital && (
+                  <p className="subText">
+                    <b>Capital: </b>
+                    {countryVal.capital}
+                  </p>
+                )}
               </div>
               <div className="text-div">
-                <p className="subText">
-                  <b>Top Level Domain: </b>
-                  {countryVal.topLevelDomain.join(", ")}
-                </p>
-                <p className="subText">
-                  <b>Currencies: </b>
-                  {countryVal.currencies
-                    .map((each: any) => each.name)
-                    .join(", ")}
-                </p>
-                <p className="subText">
-                  <b>Languages: </b>
-                  {countryVal.languages
-                    .map((each: any) => each.name)
-                    .join(", ")}
-                </p>
+                {countryVal.topLevelDomain && (
+                  <p className="subText">
+                    <b>Top Level Domain: </b>
+                    {countryVal.topLevelDomain.join(", ")}
+                  </p>
+                )}
+                {countryVal.currencies && (
+                  <p className="subText">
+                    <b>Currencies: </b>
+                    {countryVal.currencies
+                      .map((each: any) => each.name)
+                      .join(", ")}
+                  </p>
+                )}
+                {countryVal.languages && (
+                  <p className="subText">
+                    <b>Languages: </b>
+                    {countryVal.languages
+                      .map((each: any) => each.name)
+                      .join(", ")}
+                  </p>
+                )}
               </div>
             </div>
             {getBorderCountries()}
